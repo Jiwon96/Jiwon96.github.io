@@ -28,11 +28,8 @@ url: "https://jiwon96.github.io"
 github:
   username: Jiwon96 # change to your GitHub username
 
-# linkedin:
-#   username: 
-
 linkedin:
-  username: in/idjjm95 # change to your Twitter username
+  username: in/idjjm95 # change to your LinkedIn username
 
 social:
   # Change to your full name.
@@ -41,7 +38,6 @@ social:
   email: idjjm95@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    # - https://twitter.com/username # change to your Twitter homepage
     - https://github.com/Jiwon96 # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -227,3 +223,12 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-feed
