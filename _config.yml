@@ -152,8 +152,8 @@ pwa:
 
 paginate: 10
 
-# The base URL of your site
-baseurl: "/Jiwon96"
+# The base URL of your site - FIXED: 빈 값으로 설정 (GitHub Pages username.github.io 저장소용)
+baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 
