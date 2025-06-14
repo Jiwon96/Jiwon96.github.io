@@ -4,7 +4,6 @@ title: "Claude AI와 GitHub 블로그 자동화하기"
 date: 2025-06-14 15:00:00 +0900
 categories: [Tech, Automation]
 tags: [claude, github, mcp, automation, jekyll]
-pin: true
 ---
 
 # Claude AI로 GitHub 블로그를 자동화해보자! 🤖
