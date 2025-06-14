@@ -223,12 +223,3 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-sitemap
-  - jekyll-feed
