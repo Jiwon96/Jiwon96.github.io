@@ -1,4 +1,0 @@
-touch .nojekyll
-git add .nojekyll
-git commit -m "feat: disable GitHub Pages Jekyll auto-build"
-git push
