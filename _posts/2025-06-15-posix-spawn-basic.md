@@ -2,7 +2,7 @@
 layout: post
 title: "posix_spawn() - 차세대 프로세스 생성 함수"
 date: 2025-06-15 22:00:00 +0900
-categories: [Linux, System Programming]
+categories: [Linux, 시스템프로그래밍]
 tags: [posix_spawn, fork, exec, process, performance]
 ---
 

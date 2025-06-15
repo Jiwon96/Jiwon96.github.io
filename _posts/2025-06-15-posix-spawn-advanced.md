@@ -2,7 +2,7 @@
 layout: post
 title: "posix_spawn() 고급 기능 - 파일 액션과 속성 제어"
 date: 2025-06-15 23:00:00 +0900
-categories: [Linux, System Programming]
+categories: [Linux, 시스템프로그래밍]
 tags: [posix_spawn, file_actions, spawnattr, pipe, redirect]
 ---
 

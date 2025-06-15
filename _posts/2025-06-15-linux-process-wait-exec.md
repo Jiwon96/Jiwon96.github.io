@@ -2,7 +2,7 @@
 layout: post
 title: "리눅스 프로세스 관리: wait()와 exec() 함수 완전 분석"
 date: 2025-06-15 21:00:00 +0900
-categories: [Linux, System Programming]
+categories: [Linux, 시스템프로그래밍]
 tags: [wait, exec, process, zombie, fork]
 ---
 
