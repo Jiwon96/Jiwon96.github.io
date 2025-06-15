@@ -21,7 +21,7 @@ tags: [claude, github, mcp, automation, jekyll]
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "C:\\Users\\username\\Desktop\\test"
+        "C:/Users/username/Desktop/test"
       ]
     }
   }
@@ -47,8 +47,12 @@ tags: [claude, github, mcp, automation, jekyll]
 ```
 
 **설정 파일 위치:**
-- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+- Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+
+**💡 claude_desktop_config.json가 안보인다면:**
+좌측 상단 메뉴 - File - Settings - Developer - Edit Config 버튼을 눌러주세요.
+설정 파일이 있는 폴더로 바로 이동할 수 있습니다.
 
 ## 🚨 Jekyll 블로그 문제 해결
 
