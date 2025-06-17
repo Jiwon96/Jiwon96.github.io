@@ -2,7 +2,7 @@
 layout: post
 title: "Deep Neural Networks 완벽 가이드 - Andrew Ng 강의 요약"
 date: 2025-06-17 20:00:00 +0900
-categories: [AI, Deep Learning]
+categories: [AI]
 tags: [deep learning, neural networks, andrew ng, forward propagation, backward propagation, ai]
 pin: true
 ---

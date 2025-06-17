@@ -2,7 +2,7 @@
 layout: post
 title: "Andrew Ng의 딥러닝 입문 - AI가 새로운 전기가 되는 시대"
 date: 2024-06-15 09:00:00 +0900
-categories: AI
+categories: [AI]
 tags: [딥러닝, 머신러닝, Andrew Ng, 인공지능, 신경망]
 author: 지원
 description: "Andrew Ng 교수의 딥러닝 강의를 통해 알아보는 인공지능의 현재와 미래, 그리고 신경망의 기초 개념들"
