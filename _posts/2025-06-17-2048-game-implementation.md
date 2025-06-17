@@ -93,13 +93,13 @@ def roll(cnt, tmp):
     arr_t = list(map(list, zip(*tmp)))  # 전치행렬 (행↔열 변환)
 
     for d in range(4):
-        if d == 0:      # 좌: 행을 그대로
+        if d == 0:      # 좌: 0도 회전 (그대로)
             temp = [lst[::] for lst in tmp]
-        elif d == 1:    # 우: 행을 뒤집어서 (우→좌 변환)
+        elif d == 1:    # 우: 180도 회전 (행을 뒤집기)
             temp = [lst[::-1] for lst in tmp]
-        elif d == 2:    # 상: 열을 행으로 (전치행렬)
+        elif d == 2:    # 상: 270도 회전 (전치 후 그대로)
             temp = [lst[::] for lst in arr_t]
-        elif d == 3:    # 하: 열을 행으로 + 뒤집기
+        elif d == 3:    # 하: 90도 회전 (전치 후 뒤집기)
             temp = [lst[::-1] for lst in arr_t]
 
         # 모든 방향을 왼쪽 밀기로 처리!
@@ -200,13 +200,13 @@ def roll(cnt, tmp):
     arr_t = list(map(list, zip(*tmp)))
 
     for d in range(4):
-        if d == 0:
+        if d == 0:      # 좌: 0도 회전 (그대로)
             temp = [lst[::] for lst in tmp]
-        elif d == 1:
+        elif d == 1:    # 우: 180도 회전 (행을 뒤집기)
             temp = [lst[::-1] for lst in tmp]
-        elif d == 2:
+        elif d == 2:    # 상: 270도 회전 (전치 후 그대로)
             temp = [lst[::] for lst in arr_t]
-        elif d == 3:
+        elif d == 3:    # 하: 90도 회전 (전치 후 뒤집기)
             temp = [lst[::-1] for lst in arr_t]
 
         for i in range(N):
