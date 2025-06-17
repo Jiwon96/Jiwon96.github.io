@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Linux FIFO(Named Pipe)를 활용한 프로세스 간 통신"
-date: 2025-06-18 09:30:00 +0900
+date: 2025-06-17 22:30:00 +0900
 categories: [Linux, 시스템프로그래밍]
 tags: [FIFO, Named Pipe, IPC, 시스템프로그래밍, 프로세스간통신]
 ---
