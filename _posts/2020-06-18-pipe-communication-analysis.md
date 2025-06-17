@@ -2,7 +2,7 @@
 layout: post
 title: "파이프 통신과 파일 디스크립터 리다이렉션 완전 분석"
 date: 2020-06-18 10:00:00 +0900
-categories: [시스템 프로그래밍]
+categories: [Linux, 시스템프로그래밍]
 tags: [pipe, IPC, file descriptor, dup2, process communication, Linux]
 ---
 

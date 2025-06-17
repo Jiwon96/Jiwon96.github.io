@@ -2,7 +2,7 @@
 layout: post
 title: "IPC 채널의 조인 문제와 파이프 기반 해결 방안"
 date: 2025-06-18 18:16:00 +0900
-categories: [시스템 프로그래밍]
+categories: [Linux, 시스템프로그래밍]
 tags: [IPC, Linux, 파이프, FIFO, 시스템프로그래밍, 동시성]
 ---
 
