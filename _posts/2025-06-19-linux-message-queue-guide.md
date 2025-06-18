@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Linux 메시지 큐 시스템 프로그래밍 완전 가이드"
-date: 2025-06-19 09:17:00 +0900
+date: 2025-06-19 00:00:00 +0900
 categories: [Linux, 시스템프로그래밍]
 tags: [Linux, IPC, Message Queue, System Programming, C]
 ---
