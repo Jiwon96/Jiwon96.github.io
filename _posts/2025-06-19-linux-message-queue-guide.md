@@ -96,7 +96,7 @@ struct msg_queue {
 
 ## 메시지 큐 동작 다이어그램
 
-<svg width="800" height="700" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="700" xmlns="http://www.w3.org/2000/svg">
   <!-- 배경 그라디언트 -->
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -122,7 +122,7 @@ struct msg_queue {
   </defs>
   
   <!-- 배경 -->
-  <rect width="800" height="700" fill="url(#bgGrad)" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  <rect width="1000" height="700" fill="url(#bgGrad)" stroke="#dee2e6" stroke-width="2" rx="10"/>
   
   <!-- 제목 -->
   <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">
