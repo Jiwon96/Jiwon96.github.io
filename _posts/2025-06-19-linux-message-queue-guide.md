@@ -33,6 +33,8 @@ key_t key = MSQKEY;
 ```
 
 2. **ftok() 함수 사용**:
+<br>
+
 ```c
 key_t ftok(const char *pathname, int proj_id);
 
@@ -41,7 +43,7 @@ key_t key = ftok("/tmp/myfile", 65);  // 'A'의 ASCII 값
 ```
 
 
-**ftok() 동작 원리**:
+<b>ftok() 동작 원리</b>:
 - 파일 경로와 project ID를 조합하여 고유 키 생성
 - 같은 파일과 ID를 사용하면 항상 동일한 키 반환
 - 파일이 삭제되고 재생성되면 다른 키 생성 가능
