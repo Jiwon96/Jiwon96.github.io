@@ -40,6 +40,7 @@ key_t ftok(const char *pathname, int proj_id);
 key_t key = ftok("/tmp/myfile", 65);  // 'A'의 ASCII 값
 ```
 
+
 **ftok() 동작 원리**:
 - 파일 경로와 project ID를 조합하여 고유 키 생성
 - 같은 파일과 ID를 사용하면 항상 동일한 키 반환
@@ -93,7 +94,7 @@ struct msg_queue {
 
 ## 메시지 큐 동작 다이어그램
 
-<svg width="1000" height="700" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="700" xmlns="http://www.w3.org/2000/svg">
   <!-- 배경 그라디언트 -->
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -119,10 +120,10 @@ struct msg_queue {
   </defs>
   
   <!-- 배경 -->
-  <rect width="1000" height="700" fill="url(#bgGrad)" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  <rect width="800" height="700" fill="url(#bgGrad)" stroke="#dee2e6" stroke-width="2" rx="10"/>
   
   <!-- 제목 -->
-  <text x="500" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">
     🚀 메시지 큐 동작 원리 다이어그램
   </text>
   
