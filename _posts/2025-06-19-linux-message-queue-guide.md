@@ -96,117 +96,104 @@ struct msg_queue {
 
 ## 메시지 큐 동작 다이어그램
 
-<svg width="1000" height="700" xmlns="http://www.w3.org/2000/svg">
-  <!-- 배경 그라디언트 -->
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- 그라디언트 정의 -->
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f8f9fa"/>
-      <stop offset="100%" style="stop-color:#e9ecef"/>
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="processGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4facfe"/>
-      <stop offset="100%" style="stop-color:#00f2fe"/>
+      <stop offset="0%" style="stop-color:#0984e3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0277bd;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="kernelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffeaa7"/>
-      <stop offset="100%" style="stop-color:#fdcb6e"/>
+      <stop offset="0%" style="stop-color:#fd7e14;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#e17055;stop-opacity:0.8" />
     </linearGradient>
     <linearGradient id="queueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#a8e6cf"/>
-      <stop offset="100%" style="stop-color:#7fcdcd"/>
+      <stop offset="0%" style="stop-color:#00cec9;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00b894;stop-opacity:0.8" />
     </linearGradient>
     <linearGradient id="msgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#fd79a8"/>
-      <stop offset="100%" style="stop-color:#fdcb6e"/>
+      <stop offset="0%" style="stop-color:#fd79a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e84393;stop-opacity:1" />
     </linearGradient>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#00b894"/>
+    </marker>
+    <marker id="redarrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#e74c3c"/>
+    </marker>
   </defs>
-  
+
   <!-- 배경 -->
-  <rect width="1000" height="700" fill="url(#bgGrad)" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  <rect width="800" height="500" fill="url(#bgGrad)" stroke="#dee2e6" stroke-width="1" rx="8"/>
   
   <!-- 제목 -->
-  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">
-    🚀 메시지 큐 동작 원리 다이어그램
+  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+    🚀 메시지 큐 동작 원리
   </text>
   
   <!-- 송신자 프로세스 -->
-  <rect x="50" y="80" width="120" height="80" fill="url(#processGrad)" stroke="#0277bd" stroke-width="2" rx="10"/>
-  <text x="110" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">송신자</text>
-  <text x="110" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">프로세스</text>
-  <text x="110" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">PID: 1234</text>
+  <rect x="50" y="60" width="90" height="60" fill="url(#processGrad)" stroke="#0277bd" stroke-width="2" rx="8"/>
+  <text x="95" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">송신자</text>
+  <text x="95" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">프로세스</text>
+  <text x="95" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">PID: 1234</text>
   
   <!-- 수신자 프로세스 -->
-  <rect x="50" y="520" width="120" height="80" fill="url(#processGrad)" stroke="#0277bd" stroke-width="2" rx="10"/>
-  <text x="110" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">수신자</text>
-  <text x="110" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">프로세스</text>
-  <text x="110" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">PID: 5678</text>
+  <rect x="50" y="380" width="90" height="60" fill="url(#processGrad)" stroke="#0277bd" stroke-width="2" rx="8"/>
+  <text x="95" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">수신자</text>
+  <text x="95" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">프로세스</text>
+  <text x="95" y="428" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">PID: 5678</text>
   
   <!-- 커널 공간 -->
-  <rect x="250" y="200" width="600" height="220" fill="url(#kernelGrad)" stroke="#e17055" stroke-width="3" rx="15"/>
-  <rect x="270" y="185" width="100" height="30" fill="#e17055" rx="15"/>
-  <text x="320" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">🔒 커널 공간</text>
+  <rect x="200" y="150" width="450" height="160" fill="url(#kernelGrad)" stroke="#e17055" stroke-width="2" rx="10"/>
+  <rect x="210" y="135" width="80" height="25" fill="#e17055" rx="12"/>
+  <text x="250" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">🔒 커널 공간</text>
   
   <!-- 메시지 큐 -->
-  <rect x="280" y="240" width="540" height="140" fill="url(#queueGrad)" stroke="#00b894" stroke-width="2" rx="10"/>
-  <text x="550" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d3436">Message Queue (FIFO)</text>
+  <rect x="220" y="180" width="410" height="100" fill="url(#queueGrad)" stroke="#00b894" stroke-width="2" rx="8"/>
+  <text x="425" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2d3436">Message Queue (FIFO)</text>
   
   <!-- 메시지들 -->
-  <rect x="320" y="280" width="70" height="50" fill="url(#msgGrad)" stroke="#e84393" stroke-width="2" rx="5"/>
-  <text x="355" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Type: 1</text>
-  <text x="355" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">"hello"</text>
+  <rect x="250" y="215" width="50" height="40" fill="url(#msgGrad)" stroke="#e84393" stroke-width="1" rx="4"/>
+  <text x="275" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">Type: 1</text>
+  <text x="275" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">"hello"</text>
   
-  <rect x="410" y="280" width="70" height="50" fill="url(#msgGrad)" stroke="#e84393" stroke-width="2" rx="5"/>
-  <text x="445" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Type: 1</text>
-  <text x="445" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">"world"</text>
+  <rect x="320" y="215" width="50" height="40" fill="url(#msgGrad)" stroke="#e84393" stroke-width="1" rx="4"/>
+  <text x="345" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">Type: 1</text>
+  <text x="345" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">"world"</text>
   
-  <rect x="500" y="280" width="70" height="50" fill="url(#msgGrad)" stroke="#e84393" stroke-width="2" rx="5"/>
-  <text x="535" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Type: 2</text>
-  <text x="535" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">END</text>
+  <rect x="390" y="215" width="50" height="40" fill="url(#msgGrad)" stroke="#e84393" stroke-width="1" rx="4"/>
+  <text x="415" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">Type: 2</text>
+  <text x="415" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">END</text>
   
   <!-- FIFO 화살표 -->
-  <path d="M 590 305 L 750 305" stroke="#00b894" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="670" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#00b894">FIFO →</text>
-  
-  <!-- 화살표 마커 정의 -->
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#00b894"/>
-    </marker>
-    <marker id="redarrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
-    </marker>
-  </defs>
+  <path d="M 460 235 L 580 235" stroke="#00b894" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="520" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#00b894">FIFO →</text>
   
   <!-- msgsnd 화살표 -->
-  <path d="M 110 160 L 110 200" stroke="#e74c3c" stroke-width="4" marker-end="url(#redarrow)"/>
-  <rect x="130" y="170" width="60" height="20" fill="#2d3436" rx="10"/>
-  <text x="160" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">msgsnd()</text>
+  <path d="M 95 120 L 95 150" stroke="#e74c3c" stroke-width="3" marker-end="url(#redarrow)"/>
+  <rect x="105" y="125" width="50" height="18" fill="#2d3436" rx="8"/>
+  <text x="130" y="137" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">msgsnd()</text>
   
   <!-- msgrcv 화살표 -->
-  <path d="M 110 420 L 110 520" stroke="#e74c3c" stroke-width="4" marker-end="url(#redarrow)"/>
-  <rect x="130" y="460" width="60" height="20" fill="#2d3436" rx="10"/>
-  <text x="160" y="473" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">msgrcv()</text>
+  <path d="M 95 310 L 95 380" stroke="#e74c3c" stroke-width="3" marker-end="url(#redarrow)"/>
+  <rect x="105" y="335" width="50" height="18" fill="#2d3436" rx="8"/>
+  <text x="130" y="347" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">msgrcv()</text>
   
   <!-- Key 정보 박스 -->
-  <rect x="750" y="80" width="200" height="100" fill="#74b9ff" stroke="#0984e3" stroke-width="2" rx="10"/>
-  <text x="850" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">🔑 Key 시스템</text>
-  <rect x="760" y="115" width="180" height="40" fill="#2d3436" rx="5"/>
-  <text x="770" y="130" font-family="Courier New, monospace" font-size="10" fill="#74b9ff">key_t key = 51234;</text>
-  <text x="770" y="145" font-family="Courier New, monospace" font-size="10" fill="#74b9ff">msgget(key, flags);</text>
-  <text x="850" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">동일한 key로 같은 큐 접근</text>
-  
-  <!-- 단계별 설명 -->
-  <rect x="50" y="630" width="400" height="60" fill="#f8f9fa" stroke="#007bff" stroke-width="2" stroke-dasharray="5,5" rx="5"/>
-  <text x="60" y="650" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#007bff">📤 송신 과정:</text>
-  <text x="60" y="665" font-family="Arial, sans-serif" font-size="10" fill="#333">1. msgsnd() 호출 → 2. 사용자→커널 복사 → 3. 큐에 추가 → 4. 수신자 알림</text>
-  
-  <rect x="500" y="630" width="400" height="60" fill="#f8f9fa" stroke="#28a745" stroke-width="2" stroke-dasharray="5,5" rx="5"/>
-  <text x="510" y="650" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#28a745">📥 수신 과정:</text>
-  <text x="510" y="665" font-family="Arial, sans-serif" font-size="10" fill="#333">1. msgrcv() 호출 → 2. 메시지 검색 → 3. 커널→사용자 복사 → 4. 큐에서 제거</text>
+  <rect x="670" y="60" width="120" height="80" fill="#74b9ff" stroke="#0984e3" stroke-width="2" rx="8"/>
+  <text x="730" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">🔑 Key 시스템</text>
+  <rect x="680" y="85" width="100" height="35" fill="#2d3436" rx="4"/>
+  <text x="685" y="97" font-family="Courier New, monospace" font-size="8" fill="#74b9ff">key_t key = 51234;</text>
+  <text x="685" y="108" font-family="Courier New, monospace" font-size="8" fill="#74b9ff">msgget(key, flags);</text>
+  <text x="730" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">동일한 key로 같은 큐 접근</text>
   
   <!-- 연결선들 -->
-  <path d="M 170 120 Q 210 120 250 200" stroke="#666" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
-  <path d="M 250 420 Q 210 520 170 560" stroke="#666" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+  <path d="M 140 90 Q 170 90 200 180" stroke="#666" stroke-width="1" fill="none" stroke-dasharray="2,2"/>
+  <path d="M 200 310 Q 170 410 140 410" stroke="#666" stroke-width="1" fill="none" stroke-dasharray="2,2"/>
 </svg>
 
 ## 메시지 큐의 핵심 개념
