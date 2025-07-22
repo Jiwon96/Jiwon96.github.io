@@ -2,7 +2,7 @@
 layout: post
 title: "CS Network 면접 대비 - 쿠키, 세션, HTTP 무상태성 완벽 가이드"
 date: 2025-07-22
-categories: [cs, network]
+categories: [CS, Network]
 tags: [cookie, session, http, stateless, authentication, interview]
 ---
 
