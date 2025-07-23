@@ -1,5 +1,5 @@
 ---
-title: "운영체제 면접 완전 정복 - 시스템 콜부터 Dual Mode까지"
+title: "운영체제 완전 정복 - 시스템 콜부터 Dual Mode까지"
 date: 2025-07-22 23:00:00 +0900
 categories: [CS, OS]
 tags: [operating-system, system-call, dual-mode, cpu-ring, interview, cs-interview, kernel-mode, user-mode]
@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 간략버전 (면접 대비용)
+## 간략버전
 
 ### 1. 시스템 콜이 무엇인지 설명해주세요.
 

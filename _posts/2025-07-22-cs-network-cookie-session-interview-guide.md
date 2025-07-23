@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CS Network 면접 대비 - 쿠키, 세션, HTTP 무상태성 완벽 가이드"
+title: "CS Network 대비 - 쿠키, 세션, HTTP 무상태성 완벽 가이드"
 date: 2025-07-22
 categories: [CS, Network]
 tags: [cookie, session, http, stateless, authentication, interview]
@@ -8,7 +8,7 @@ tags: [cookie, session, http, stateless, authentication, interview]
 
 # 쿠키와 세션의 차이점부터 멀티서버 세션 관리까지
 
-네트워크 기초 개념 중 면접에서 자주 출제되는 **쿠키와 세션**, **HTTP 무상태성**, **분산 환경에서의 세션 관리** 등을 체계적으로 정리했습니다.
+네트워크 기초 개념 중 자주 출제되는 **쿠키와 세션**, **HTTP 무상태성**, **분산 환경에서의 세션 관리** 등을 체계적으로 정리했습니다.
 
 ## 1. 쿠키와 세션의 차이에 대해 설명해 주세요
 

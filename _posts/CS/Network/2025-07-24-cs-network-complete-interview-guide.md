@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "CS Network 면접 완전 정복 가이드"
+title: "CS Network 정복 가이드"
 date: 2025-07-24
 categories: [CS, Network]
-tags: [CS, 네트워크, 면접, HTTP, HTTPS, 쿠키, 세션, 웹소켓, CORS, XSS]
+tags: [CS, 네트워크, HTTP, HTTPS, 쿠키, 세션, 웹소켓, CORS, XSS]
 ---
 
-# Network 면접 완전 정복 가이드
+# Network 완전 정복 가이드
 
 ## 웹 통신의 전체적인 흐름 이해하기
 
@@ -174,7 +174,7 @@ HTTP/1.1부터 기술적으로는 GET에 Body 사용이 가능하지만, 여전�
 **4xx (클라이언트 오류)**: 클라이언트 요청에 오류가 있음
 **5xx (서버 오류)**: 서버가 요청을 처리하지 못함
 
-### 면접에서 자주 묻는 응답 코드들
+### 자주 묻는 응답 코드들
 
 **200 (OK) vs 201 (Created)**
 - **200**: 요청이 성공했고, 응답 본문에 결과가 포함됨
