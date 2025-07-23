@@ -518,3 +518,41 @@ Access-Control-Max-Age: 86400
 2. 피해자가 해당 게시글 조회
 3. 스크립트 실행으로 쿠키가 공격자에게 전송
 ```
+
+**Reflected XSS (반사형):**
+```
+악성 URL: https://site.com/search?q=<script>alert('XSS')</script>
+피해자가 URL 클릭 시 스크립트 실행
+```
+
+**DOM-based XSS:**
+```javascript
+// 취약한 코드
+document.getElementById('welcome').innerHTML = 
+    "안녕하세요, " + location.hash.substring(1) + "님";
+
+// 악성 URL
+https://site.com#<script>alert('XSS')</script>
+```
+
+### XSS vs CSRF 차이점
+
+**XSS**: 사용자의 브라우저에서 **악성 스크립트를 실행**시키는 공격
+**CSRF**: 사용자가 **의도하지 않은 요청을 전송**하게 만드는 공격
+
+```
+XSS 공격 흐름:
+공격자 → 악성 스크립트 삽입 → 피해자 브라우저에서 실행
+
+CSRF 공격 흐름:
+피해자가 정상 사이트 로그인 → 공격자 사이트 방문 → 공격자 사이트에서 정상 사이트로 요청 전송
+```
+
+### XSS 방어 방법
+
+**프론트엔드만으로는 완전한 방어 불가능**
+
+**백엔드 방어:**
+- **입력값 검증**: HTML 태그 필터링
+- **출력값 인코딩**: <, >, &, " 등을 HTML 엔티티로 변환
+- **CSP(Content Security Policy)**: 스크립트 실행 정책 설정
