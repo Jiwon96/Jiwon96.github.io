@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTTP & 웹 보안: SOP, Stateless/Connectionless, XSS 완전 가이드"
-date: 2025-07-25 14:30:00 +0900
+date: 2024-07-25 14:30:00 +0900
 categories: [CS, Network]
 tags: [HTTP, 웹보안, SOP, Stateless, Connectionless, XSS, CORS, 네트워크]
 ---
